@@ -5,10 +5,21 @@
     */
 
     //ENTRADA
-
+    const num = Math.round(prompt("Insira um número inteiro").replace(",", ".").trim());
     
     //PROCESSAMENTO
-    
+    if (isNaN(num)) {
+        alert(`Insira um número.`);
+    }
+    else {
+        if (num % 2 == 0) {
+            alert(`Ele é par.`);
+        }
+        else {
+            alert(`Ele é impar.`);
+        }
+    }
+
     
     //SAÍDA
     

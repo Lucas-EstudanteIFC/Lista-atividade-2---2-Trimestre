@@ -5,10 +5,37 @@
     */
 
     //ENTRADA
+    const num1 = Number(prompt("Insira um número qualquer.").replace(",", ".").trim());
+    const num2 = Number(("Insira aqui um segundo número.").replace(",", ".").trim());
+    const num3 = Number(prompt("Insira um terceiro número.").replace(",", ".").trim());
 
-    
     //PROCESSAMENTO
-    
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        alert(`Insira números, por favor.`)
+    }
+    else {
+        if (num1 == num2 || num2 == num3 || num1 == num3) {
+            alert(`Insira valores diferentes.`)
+        }
+        else if (num1 > num2 && num2 > num3) {
+            alert(`Os números, em ordem decrescente são: ${num1.replace(".", ",")}, ${num2.replace(".", ",")} e ${num3.replace(".", ",")}`)
+        }
+        else if (num1 > num3 && num3 > num2) {
+            alert(`Os números, em ordem decrescente são: ${num1.replace(".", ",")}, ${num3.replace(".", ",")} e ${num2.replace(".", ",")}`)
+        }
+        else if (num2 > num1 && num1 > num3) {
+            alert(`Os números, em ordem decrescente são: ${num2.replace(".", ",")}, ${num1.replace(".", ",")} e ${num3.replace(".", ",")}`)
+        }
+        else if (num2 > num3 && num3 > num1) {
+            alert(`Os números, em ordem decrescente são: ${num2.replace(".", ",")}, ${num3.replace(".", ",")} e ${num1.replace(".", ",")}`)
+        }
+        else if (num3 > num1 && num1 > num2) {
+            alert(`Os números, em ordem decrescente são: ${num3.replace(".", ",")}, ${num1.replace(".", ",")} e ${num2.replace(".", ",")}`)
+        }
+        else if (num3 > num2 && num2 > num1) {
+            alert(`Os números, em ordem decrescente são: ${num3.replace(".", ",")}, ${num2.replace(".", ",")} e ${num1.replace(".", ",")}`)
+        }
+    }
     //SAÍDA
-    
+
 </script>
