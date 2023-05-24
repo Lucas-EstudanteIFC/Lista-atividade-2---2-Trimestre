@@ -6,13 +6,20 @@
     */
 
     //ENTRADA
-    let num1 = Math.round(prompt("Insira aqui um número inteiro qualquer.").replace(",", ".").trim());
-    let num2 = Math.round(prompt("Informe outro número inteiro qualquer").replace(",", ".").trim());
-    const num3 = num1
+    let num1 = Number(prompt("Insira aqui um número inteiro qualquer.").replace(",", ".").trim());
+    let num2 = Number(prompt("Informe outro número inteiro qualquer").replace(",", ".").trim());
+
     //PROCESSAMENTO
-    num1 = num2
-    num2 = num3
+    if (isNaN(num1) || isNaN(num2)) {
+        alert(`Valor inválido encontrado.`)
+    }
+    else {
+        const num3 = num1
+        num1 = num2
+        num2 = num3
+        alert(`O valor antigo do número um é ${num2} e de número dois é ${num1}, nesta ordem. Agora, o valor novo de número um é ${num1} o valor novo de número dois ${num2}.`).trim();
+    }
+
     //SAÍDA
-    alert(`O valor antigo do número um é ${num2} e de número dois é ${num1}, nesta ordem. Agora, o valor novo de número um é ${num1} o valor novo de número dois ${num2}.`).trim();
 
 </script>

@@ -11,11 +11,22 @@
     */
 
     //ENTRADA
-    const num = Math.round(prompt("Insira um número inteiro menor que 1000").replace(",", ".").trim());
+    const num = Number(Math.round(prompt("Insira um número inteiro menor que 1000").trim()));
 
     //PROCESSAMENTO
+    if (isNaN(num)) {
+        alert(`Valor Inválido.`);
+    }
+    else {
+        if (num.length < 3) {
+            const centenas = num / 100;
+            const dezenas = (num % 100) / 10;
+            const unidades = (num % 100) % 10;
 
-    
+            
+        }
+    }
+
     //SAÍDA
 
 

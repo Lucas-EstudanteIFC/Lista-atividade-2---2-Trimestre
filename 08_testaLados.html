@@ -9,13 +9,18 @@
 
     //Processamento
     if (isNaN(lado1) || isNaN(lado2) || isNaN(lado3)) {
-        alert(`Informe apenas números.`)
+        alert(`Informe apenas números.`);
     }
     else {
-        if (lado1 == lado2 && lado2 == lado2 == lado3 && lado1 == lado3) {
-            alert(`É um triângulo equilátero.`)
+        if (lado1 == lado2 && lado2 == lado3 && lado1 == lado3) {
+            alert(`É um triângulo equilátero.`);
         }
-        else if (lado1 == lado2 && lado1 !== lado3 || lado1 == lado3 && lado1 !== lado2 || lado2){}
+        else if (lado1 == lado2 && lado1 !== lado3 || lado1 == lado3 && lado1 !== lado2 || lado2 == lado1 && lado2 !== lado3 || lado2 == lado3 && lado2 !== lado1 || lado3 == lado1 && lado3 !== lado2 || lado3 == lado2 && lado3 !== lado1) {
+            alert(`É um triângulo isósceles.`);
+        }
+        else if (lado1 !== lado2 && lado1 !== lado3 && lado2 !== lado3) {
+            alert(`É um triângulo escaleno.`);
+        }
     }
 
     //Saída

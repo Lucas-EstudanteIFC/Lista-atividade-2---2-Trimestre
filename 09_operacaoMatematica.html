@@ -8,11 +8,100 @@
     */
 
     //ENTRADA
-
-
+    const num1 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
+    const num2 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
+    const operacao = prompt("Que operação quer realizar com estes números (Informe o símbolo da operação requirida.)").trim();
     //PROCESSAMENTO
+    if (isNaN(num1) || isNaN(num2) || operacao !== "+" || operacao !== "-" || operacao !== "/" || operacao !== "*") {
+        alert(`Valor inválido encontrado.`);
+    }
+    else {
+        if (operacao == "+") {
+            const num3 = num1 + num2;
+            if (num3 % 2 == 0) {
+                alert(`Ele é par.`);
+            }
+            else {
+                alert(`Ele é ímpar.`);
+            }
+            if (num3 % 1 === 0) {
+                alert(`Ele é inteiro.`);
+            }
+            else {
+                alert(`Ele é decimal.`);
+            }
+            if (num3 >= 0) {
+                alert(`Ele é positivo.`);
+            }
+            else {
+                alert(`Ele é negativo.`)
+            }
+        }
+        else if (operacao == "-") {
+            const num3 = num1 - num2;
+            if (num3 % 2 == 0) {
+                alert(`Ele é par.`);
+            }
+            else {
+                alert(`Ele é ímpar.`);
+            }
+            if (num3 % 1 === 0) {
+                alert(`Ele é inteiro.`);
+            }
+            else {
+                alert(`Ele é decimal.`);
+            }
+            if (num3 >= 0) {
+                alert(`Ele é positivo.`);
+            }
+            else {
+                alert(`Ele é negativo.`)
+            }
+        }
+        else if (operacao == "/") {
+            const num3 = num1 / num2;
+            if (num3 % 2 == 0) {
+                alert(`Ele é par.`);
+            }
+            else {
+                alert(`Ele é ímpar.`);
+            }
+            if (num3 % 1 === 0) {
+                alert(`Ele é inteiro.`);
+            }
+            else {
+                alert(`Ele é decimal.`);
+            }
+            if (num3 >= 0) {
+                alert(`Ele é positivo.`);
+            }
+            else {
+                alert(`Ele é negativo.`)
+            }
+        }
+        else if (operacao == "*") {
+            const num3 = num1 * num2;
+            if (num3 % 2 == 0) {
+                alert(`Ele é par.`);
+            }
+            else {
+                alert(`Ele é ímpar.`);
+            }
+            if (num3 % 1 === 0) {
+                alert(`Ele é inteiro.`);
+            }
+            else {
+                alert(`Ele é decimal.`);
+            }
+            if (num3 >= 0) {
+                alert(`Ele é positivo.`);
+            }
+            else {
+                alert(`Ele é negativo.`)
+            }
+        }
+    }
 
-    
     //SAÍDA
 
 
