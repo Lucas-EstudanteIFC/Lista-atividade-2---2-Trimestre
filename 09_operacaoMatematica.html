@@ -10,13 +10,13 @@
     //ENTRADA
     const num1 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
     const num2 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
-    const operacao = prompt("Que operação quer realizar com estes números (Informe o símbolo da operação requirida.)").trim();
+    const operacao = prompt("Que operação quer realizar com estes números.").trim().toLowerCase();
     //PROCESSAMENTO
-    if (isNaN(num1) || isNaN(num2) || operacao !== "+" || operacao !== "-" || operacao !== "/" || operacao !== "*") {
+    if (isNaN(num1) || isNaN(num2)) {
         alert(`Valor inválido encontrado.`);
     }
     else {
-        if (operacao == "+") {
+        if (operacao === "mais" || operacao === "adição") {
             const num3 = num1 + num2;
             if (num3 % 2 == 0) {
                 alert(`Ele é par.`);
@@ -37,9 +37,9 @@
                 alert(`Ele é negativo.`)
             }
         }
-        else if (operacao == "-") {
+        else if (operacao === "menos" || operacao === "subtração") {
             const num3 = num1 - num2;
-            if (num3 % 2 == 0) {
+            if (num3 % 2 === 0) {
                 alert(`Ele é par.`);
             }
             else {
@@ -58,7 +58,7 @@
                 alert(`Ele é negativo.`)
             }
         }
-        else if (operacao == "/") {
+        else if (operacao === "dividir" || operacao === "divisão") {
             const num3 = num1 / num2;
             if (num3 % 2 == 0) {
                 alert(`Ele é par.`);
@@ -79,9 +79,9 @@
                 alert(`Ele é negativo.`)
             }
         }
-        else if (operacao == "*") {
+        else if (operacao === "vezes" || operacao === "multiplicação") {
             const num3 = num1 * num2;
-            if (num3 % 2 == 0) {
+            if (num3 % 2 === 0) {
                 alert(`Ele é par.`);
             }
             else {
