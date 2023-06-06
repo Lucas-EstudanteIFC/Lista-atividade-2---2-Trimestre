@@ -8,9 +8,10 @@
     */
 
     //ENTRADA
-    const num1 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
-    const num2 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
+    let num1 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
+    let num2 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
     const operacao = prompt("Que operação quer realizar com estes números.").trim().toLowerCase();
+    let mensagemFinal = `Este resultado é `
     //PROCESSAMENTO
     if (isNaN(num1) || isNaN(num2)) {
         alert(`Valor inválido encontrado.`);
@@ -18,87 +19,95 @@
     else {
         if (operacao === "mais" || operacao === "adição") {
             const num3 = num1 + num2;
+            mensagemFinal = mensagemFinal + `${num3}, sendo ele: `;
             if (num3 % 2 == 0) {
-                alert(`Ele é par.`);
+                mensagemFinal = mensagemFinal + ` par; `;
             }
             else {
-                alert(`Ele é ímpar.`);
+                mensagemFinal = mensagemFinal + `ímpar; `;
             }
             if (num3 % 1 === 0) {
-                alert(`Ele é inteiro.`);
+                mensagemFinal = mensagemFinal + `inteiro e `;
             }
             else {
-                alert(`Ele é decimal.`);
+                mensagemFinal = mensagemFinal + `decimal e `;
             }
             if (num3 >= 0) {
-                alert(`Ele é positivo.`);
+                mensagemFinal = mensagemFinal + `positivo.`;
             }
             else {
-                alert(`Ele é negativo.`)
+                mensagemFinal = mensagemFinal + `negativo`;
             }
+            document.write(mensagemFinal);
         }
         else if (operacao === "menos" || operacao === "subtração") {
             const num3 = num1 - num2;
-            if (num3 % 2 === 0) {
-                alert(`Ele é par.`);
+            mensagemFinal = mensagemFinal + `${num3}, sendo ele: `;
+            if (num3 % 2 == 0) {
+                mensagemFinal = mensagemFinal + ` par; `;
             }
             else {
-                alert(`Ele é ímpar.`);
+                mensagemFinal = mensagemFinal + `ímpar; `;
             }
             if (num3 % 1 === 0) {
-                alert(`Ele é inteiro.`);
+                mensagemFinal = mensagemFinal + `inteiro e `;
             }
             else {
-                alert(`Ele é decimal.`);
+                mensagemFinal = mensagemFinal + `decimal e `;
             }
             if (num3 >= 0) {
-                alert(`Ele é positivo.`);
+                mensagemFinal = mensagemFinal + `positivo.`;
             }
             else {
-                alert(`Ele é negativo.`)
+                mensagemFinal = mensagemFinal + `negativo`;
             }
+            document.write(mensagemFinal);
         }
         else if (operacao === "dividir" || operacao === "divisão") {
             const num3 = num1 / num2;
+            mensagemFinal = mensagemFinal + `${num3}, sendo ele: `;
             if (num3 % 2 == 0) {
-                alert(`Ele é par.`);
+                mensagemFinal = mensagemFinal + ` par; `;
             }
             else {
-                alert(`Ele é ímpar.`);
+                mensagemFinal = mensagemFinal + `ímpar; `;
             }
             if (num3 % 1 === 0) {
-                alert(`Ele é inteiro.`);
+                mensagemFinal = mensagemFinal + `inteiro e `;
             }
             else {
-                alert(`Ele é decimal.`);
+                mensagemFinal = mensagemFinal + `decimal e `;
             }
             if (num3 >= 0) {
-                alert(`Ele é positivo.`);
+                mensagemFinal = mensagemFinal + `positivo.`;
             }
             else {
-                alert(`Ele é negativo.`)
+                mensagemFinal = mensagemFinal + `negativo`;
             }
+            document.write(mensagemFinal);
         }
-        else if (operacao === "vezes" || operacao === "multiplicação") {
+        if (operacao === "vezes" || operacao === "multiplicação") {
             const num3 = num1 * num2;
-            if (num3 % 2 === 0) {
-                alert(`Ele é par.`);
+            mensagemFinal = mensagemFinal + `${num3}, sendo ele: `;
+            if (num3 % 2 == 0) {
+                mensagemFinal = mensagemFinal + ` par; `;
             }
             else {
-                alert(`Ele é ímpar.`);
+                mensagemFinal = mensagemFinal + `ímpar; `;
             }
             if (num3 % 1 === 0) {
-                alert(`Ele é inteiro.`);
+                mensagemFinal = mensagemFinal + `inteiro e `;
             }
             else {
-                alert(`Ele é decimal.`);
+                mensagemFinal = mensagemFinal + `decimal e `;
             }
             if (num3 >= 0) {
-                alert(`Ele é positivo.`);
+                mensagemFinal = mensagemFinal + `positivo.`;
             }
             else {
-                alert(`Ele é negativo.`)
+                mensagemFinal = mensagemFinal + `negativo`;
             }
+            document.write(mensagemFinal);
         }
     }
 

@@ -4,8 +4,28 @@
 
     // entrada
 
-    
+    const bigBrother = Number(prompt(`Insira a nota do bigBrother:`).trim().replace(",","."));
+    const inicialLittleBrother = Number(prompt(`Insira a nota inicial do littleBrother:`).trim().replace(",","."));
+    const finalLittleBrother = Number(prompt(`Insira a nota final do littleBrother:`).trim().replace(",","."));
+
     // processamento
+
+    const finalInicial = finalLittleBrother - inicialLittleBrother;
+
+    if (bigBrother < 0 || bigBrother > 10 || inicialLittleBrother < 0 || inicialLittleBrother > 10 || finalLittleBrother < 0 || finalLittleBrother >10) {
+        alert ("Insira valores que estejam entre 0 e 10!");
+    }
+
+    else {
+        if (finalInicial < 0) {
+            alert(`Não houve um aumento na nota do little brother`);
+        }
+        else {
+            const notaBig = bigBrother + ((25 / 100) * finalInicial);
+
+            alert(`A nota final que o big brother será ${notaBig.toFixed(2).replace(".",",")} `);
+        }
+    }
 
     
     // saída
