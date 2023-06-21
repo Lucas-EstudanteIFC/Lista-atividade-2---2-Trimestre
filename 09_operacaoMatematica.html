@@ -10,103 +10,83 @@
     //ENTRADA
     let num1 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
     let num2 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
-    const operacao = prompt("Que operação quer realizar com estes números.").trim().toLowerCase();
+    const operacao = prompt("Que operação quer realizar com estes números? \n sugestões: +|-|*|/").trim().toLowerCase();
     let mensagemFinal = `Este resultado é `
     //PROCESSAMENTO
     if (isNaN(num1) || isNaN(num2)) {
         alert(`Valor inválido encontrado.`);
     }
     else {
-        if (operacao === "mais" || operacao === "adição") {
+        if (operacao === "+") {
             const num3 = num1 + num2;
-            mensagemFinal = mensagemFinal + `${num3}, sendo ele: `;
-            if (num3 % 2 == 0) {
-                mensagemFinal = mensagemFinal + ` par; `;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `ímpar; `;
-            }
-            if (num3 % 1 === 0) {
-                mensagemFinal = mensagemFinal + `inteiro e `;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `decimal e `;
-            }
-            if (num3 >= 0) {
-                mensagemFinal = mensagemFinal + `positivo.`;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `negativo`;
-            }
+            mensagemFinal += `${num3}, sendo ele: `;
+            
+            if (num3 % 2 == 0) mensagemFinal += ` par; `;
+            else mensagemFinal += `ímpar; `;
+
+            if (num3 % 1 == 0) mensagemFinal += `inteiro; `;
+            else mensagemFinal += `decimal e `;
+
+            if (num3 >= 0) mensagemFinal += `positivo `;
+            else mensagemFinal += `negativo `;
+
+            if ((Math.sqrt(num3)) % 1 == 0) mensagemFinal += `e possui raiz exata.`;
+            else mensagemFinal += `e não possui raiz exata.`;
+
             document.write(mensagemFinal);
         }
-        else if (operacao === "menos" || operacao === "subtração") {
+        else if (operacao === "-") {
             const num3 = num1 - num2;
-            mensagemFinal = mensagemFinal + `${num3}, sendo ele: `;
-            if (num3 % 2 == 0) {
-                mensagemFinal = mensagemFinal + ` par; `;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `ímpar; `;
-            }
-            if (num3 % 1 === 0) {
-                mensagemFinal = mensagemFinal + `inteiro e `;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `decimal e `;
-            }
-            if (num3 >= 0) {
-                mensagemFinal = mensagemFinal + `positivo.`;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `negativo`;
-            }
+            mensagemFinal += `${num3}, sendo ele: `;
+
+            if (num3 % 2 == 0) mensagemFinal += ` par; `;
+            else mensagemFinal += `ímpar; `;
+
+            if (num3 % 1 === 0) mensagemFinal += `inteiro; `;
+            else mensagemFinal += `decimal e `;
+
+            if (num3 >= 0) mensagemFinal += `positivo `;
+            else mensagemFinal += `negativo `;
+
+            if ((Math.sqrt(num3)) % 1 == 0) mensagemFinal += `e possui raiz exata.`;
+            else mensagemFinal += `e não possui raiz exata.`;
+
             document.write(mensagemFinal);
         }
-        else if (operacao === "dividir" || operacao === "divisão") {
+        else if (operacao === "*") {
             const num3 = num1 / num2;
-            mensagemFinal = mensagemFinal + `${num3}, sendo ele: `;
-            if (num3 % 2 == 0) {
-                mensagemFinal = mensagemFinal + ` par; `;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `ímpar; `;
-            }
-            if (num3 % 1 === 0) {
-                mensagemFinal = mensagemFinal + `inteiro e `;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `decimal e `;
-            }
-            if (num3 >= 0) {
-                mensagemFinal = mensagemFinal + `positivo.`;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `negativo`;
-            }
+            mensagemFinal += `${num3}, sendo ele: `;
+
+            if (num3 % 2 == 0) mensagemFinal += ` par; `;
+            else mensagemFinal += `ímpar; `;
+
+            if (num3 % 1 === 0) mensagemFinal += `inteiro; `;
+            else mensagemFinal += `decimal e `;
+
+            if (num3 >= 0) mensagemFinal += `positivo `;
+            else mensagemFinal += `negativo `;
+
+            if ((Math.sqrt(num3)) % 1 == 0) mensagemFinal += `e possui raiz exata.`;
+            else mensagemFinal += `e não possui raiz exata.`;
+
             document.write(mensagemFinal);
         }
-        if (operacao === "vezes" || operacao === "multiplicação") {
+        if (operacao === "/") {
             const num3 = num1 * num2;
-            mensagemFinal = mensagemFinal + `${num3}, sendo ele: `;
-            if (num3 % 2 == 0) {
-                mensagemFinal = mensagemFinal + ` par; `;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `ímpar; `;
-            }
-            if (num3 % 1 === 0) {
-                mensagemFinal = mensagemFinal + `inteiro e `;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `decimal e `;
-            }
-            if (num3 >= 0) {
-                mensagemFinal = mensagemFinal + `positivo.`;
-            }
-            else {
-                mensagemFinal = mensagemFinal + `negativo`;
-            }
+            mensagemFinal += `${num3}, sendo ele: `;
+
+            if (num3 % 2 == 0) mensagemFinal += ` par; `;
+            else mensagemFinal += `ímpar; `;
+            
+            if (num3 % 1 === 0) mensagemFinal += `inteiro; `;
+            else mensagemFinal += `decimal e `;
+            
+            if (num3 >= 0) mensagemFinal += `positivo `;
+            else mensagemFinal += `negativo `;
+            
+            if ((Math.sqrt(num3)) % 1 == 0) mensagemFinal += `e possui raiz exata.`;
+            else mensagemFinal += `e não possui raiz exata.`;
+            
             document.write(mensagemFinal);
         }
     }
